@@ -1,0 +1,67 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+<meta charset="utf-8">
+<title>Angular test</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+<link rel="stylesheet" type="text/css" href="css/component.css">
+</head>
+
+<body ng-controller="mainCtrl">
+    <div class="container">
+        <ul id="gn-menu" class="gn-menu-main" ng-show="username">
+            <li class="gn-trigger">
+                <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+                <nav class="gn-menu-wrapper">
+                    <div class="gn-scroller">
+                        <ul class="gn-menu">
+                            <li class="gn-search-item">
+                                <input placeholder="Search" type="search" class="gn-search">
+                                <a class="gn-icon gn-icon-search"><span>Search</span></a>
+                            </li>
+                            <li>
+                                <a class="gn-icon gn-icon-download">Downloads</a>
+                                <ul class="gn-submenu">
+                                    <li><a class="gn-icon gn-icon-illustrator">Vector Illustrations</a></li>
+                                    <li><a class="gn-icon gn-icon-photoshop">Photoshop files</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="gn-icon gn-icon-cog">Settings</a></li>
+                            <li><a class="gn-icon gn-icon-help">Help</a></li>
+                            <li>
+                                <a class="gn-icon gn-icon-archive">Archives</a>
+                                <ul class="gn-submenu">
+                                    <li><a class="gn-icon gn-icon-article">Articles</a></li>
+                                    <li><a class="gn-icon gn-icon-pictures">Images</a></li>
+                                    <li><a class="gn-icon gn-icon-videos">Videos</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!-- /gn-scroller -->
+                </nav>
+            </li>
+            <li><a href="#/home"><i class="glyphicon glyphicon-home"></i></a></li>
+            <li><a href="#/login" ng-click="logout();"><i class="glyphicon glyphicon-off"></i></a></li>
+            <li><a href="#/user">{{username}} <i class="glyphicon glyphicon-user"></i></a></li>
+        </ul>
+        {{maincontent}}
+        
+        <header ng-view="">
+            	
+        </header> 
+    </div><!-- /container -->
+
+<script src="js/angular.min.js"></script>
+<script src="js/angular-route.min.js"></script>
+<script src="js/angular-animate.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/gnmenu.js"></script>
+<script src="js/signin.js"></script>
+<script>
+	new gnMenu( document.getElementById( 'gn-menu' ) );
+</script>
+
+</body>
+</html>

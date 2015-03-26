@@ -1,0 +1,64 @@
+
+<div class="page-content">
+
+<div class="row">
+<div class="space-6"></div>
+<div class="col-sm-7 col-sm-offset-5 text-center" dir="rtl">
+    <div id="login-box" class="login-box visible widget-box no-border">
+        <div class="widget-body">
+            <div class="widget-main">
+                <h3 class="header blue lighter bigger">
+                    <i class="icon-coffee green"></i>
+                    ورود به پنل ادمین
+                </h3>
+
+                <div class="space-16"></div>
+
+                <form name="loginForm" class="form-horizontal" role="form">
+                    <div class="form-group">
+                        
+                        <div class="col-sm-9">
+                           <span class="block input-icon input-icon-right">
+                                <input type="text" class="form-control" placeholder="Username" name="email" ng-model="login.user" required focus/>
+                                <i class="ace-icon fa fa-user"></i>
+                            </span>
+                        </div>
+                        <label class="col-sm-3 control-label no-padding-right" for="email"> نام کاربری </label>
+                    </div>
+                    <div class="form-group">
+                        
+                        <div class="col-sm-9">
+                           <span class="block input-icon input-icon-right">
+                                <input type="password" class="form-control" placeholder="Password" ng-model="login.password" required/>
+                                <i class="ace-icon fa fa-lock"></i>
+                            </span>
+                        </div>
+                        <label class="col-sm-3 control-label no-padding-right" for="password"> کلمه عبور </label>
+                    </div>
+                    <div class="space"></div>
+                     <div class="clearfix"></div>
+                                                        <div class="row">
+                         
+                        <div class="col-sm-12">
+                            <button type="submit" class="btn btn-block btn-success" ng-click="login(login.user,login.password)" data-ng-disabled="loginForm.$invalid">
+                                <i class="ace-icon fa fa-key"></i>
+                                ورود
+                            </button>
+                                                            </div>
+                        </div>
+                    
+                        <div class="space-4"></div>
+                
+                </form>
+
+                {{error}}
+                
+            </div><!-- /widget-main -->
+
+            
+        </div><!-- /widget-body -->
+    </div><!-- /login-box -->
+
+</div><!-- /position-relative -->
+</div>
+</div><!-- /.page-content -->
